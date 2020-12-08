@@ -10,7 +10,7 @@ gaia_cols = ['source_id',
 q_base = (f"SELECT {', '.join(gaia_cols)}" + 
 '''
 FROM gaiaedr3.gaia_source
-WHERE parallax < 1 AND bp_rp > -0.75 AND bp_rp < 2 AND
+WHERE parallax < 1 AND bp_rp > -0.75 AND bp_rp < 3.5 AND
       CONTAINS(POINT('ICRS', ra, dec), 
                POLYGON('ICRS', 
                        {0[0].ra.degree}, {0[0].dec.degree}, 
